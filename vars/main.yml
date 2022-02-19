@@ -36,3 +36,12 @@ fail2ban_base_jail_configuration:
   - option: sender
     value: "{{ fail2ban_sender }}"
     section: DEFAULT
+  - option: action
+    value: "{{ fail2ban_action }}"
+    section: DEFAULT
+  - option: banaction
+    value: "{{ fail2ban_banaction }}"
+    section: DEFAULT
+  - option: chain
+    value: "{{ fail2ban_chain }}"
+    section: DEFAULT

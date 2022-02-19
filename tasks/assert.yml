@@ -68,6 +68,27 @@
       - fail2ban_sender is string
     quiet: yes
 
+- name: test if fail2ban_action is set correctly
+  ansible.builtin.assert:
+    that:
+      - fail2ban_action is defined
+      - fail2ban_action is string
+    quiet: yes
+
+- name: test if fail2ban_banaction is set correctly
+  ansible.builtin.assert:
+    that:
+      - fail2ban_banaction is defined
+      - fail2ban_banaction is string
+    quiet: yes
+
+- name: test if fail2ban_chain is set correctly
+  ansible.builtin.assert:
+    that:
+      - fail2ban_chain is defined
+      - fail2ban_chain is string
+    quiet: yes
+
 - name: test if fail2ban_configuration is set correctly
   ansible.builtin.assert:
     that:

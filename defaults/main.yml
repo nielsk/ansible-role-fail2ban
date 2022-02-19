@@ -15,6 +15,10 @@ fail2ban_maxretry: 5
 fail2ban_destemail: root@localhost
 fail2ban_sender: root@{{ ansible_fqdn }}
 
+fail2ban_action: "%(action_mwl)s"
+fail2ban_banaction: nftables-multiport
+fail2ban_chain: input
+
 fail2ban_configuration: []
 #  - option: loglevel
 #    value: "INFO"
